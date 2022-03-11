@@ -1,0 +1,31 @@
+.header {
+  padding: 40px 0;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    cursor: pointer;
+  }
+}
+.menu {
+  font-family: $font;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0 32px;
+
+  &-link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(22 / 18);
+  }
+  &-link.active {
+    font-weight: 700;
+    opacity: unset;
+  }
+  &-link:hover {
+    color: $red-color;
+  }
+}
