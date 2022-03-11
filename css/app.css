@@ -29,6 +29,11 @@ body {
   background-color: #5cc6ee;
 }
 
+a {
+  text-decoration: none;
+  color: #1d3b6c;
+}
+
 .text-red {
   color: #cb0707;
 }
@@ -104,10 +109,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-a {
-  text-decoration: none;
-}
-
 .header {
   padding: 40px 0;
 }
@@ -129,6 +130,7 @@ a {
 }
 .menu-link {
   font-family: "Inter", sans-serif;
+  color: #1d3b6c;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2222222222;
