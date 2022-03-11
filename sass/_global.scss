@@ -27,8 +27,25 @@ body {
   }
 }
 .text-red {
-  color: red;
+  color: #cb0707;
 }
 .text-white {
-  color: white;
+  color: $text-white-color;
+}
+.text-blue {
+  color: $blue-color;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 900;
+  &-line {
+    height: 3px;
+    border-width: 0;
+    background-color: #5cc6ee;
+    width: 181px;
+  }
 }

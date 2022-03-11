@@ -18,9 +18,43 @@
       type="image/png"
     />
     <link rel="stylesheet" href="./css/app.css" />
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="./js/vnmap.js"></script>
   </head>
   <body>
     <!-- sass ./sass/app.scss ./css/app.css --watch -->
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "106965598263263");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v13.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
     <div class="wrapper">
       <div class="header">
         <div class="container">
@@ -67,6 +101,35 @@
               <span class="text-white">DỊCH BỆNH</span>
               <span class="text-red">COVID-19</span>
             </h1>
+          </div>
+        </section>
+        <section class="statistical">
+          <div class="container">
+            <div class="statistical-container">
+              <div class="heading statistical-heading">
+                <h2>THỐNG KÊ</h2>
+                <hr class="heading-line" />
+              </div>
+            </div>
+            <div class="statistical-content">
+              <div class="covid-data">
+                <div class="covid-data-item">
+                  <h4 class="covid-data-title">Số ca nhiễm</h4>
+                  <p class="text-red covid-data-number">5.260.495</p>
+                </div>
+                <div class="covid-data-item">
+                  <h4 class="covid-data-title">Số ca khỏi</h4>
+                  <p class="text-blue covid-data-number">2.908.365</p>
+                </div>
+                <div class="covid-data-item">
+                  <h4 class="covid-data-title">Số ca tử vong</h4>
+                  <p class="text-red covid-data-number">41.157</p>
+                </div>
+              </div>
+              <div class="statistical-map">
+                <div id="map"></div>
+              </div>
+            </div>
           </div>
         </section>
       </main>

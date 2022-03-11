@@ -1,0 +1,52 @@
+.statistical {
+  padding-top: 86px;
+  padding-bottom: 160px;
+  &-container {
+    display: flex;
+    justify-content: center;
+  }
+  &-heading {
+    margin-bottom: 50px;
+  }
+  &-content {
+    gap: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.covid-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 0;
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 300px;
+    border: 1px solid;
+  }
+  &-title {
+    font-weight: 700;
+    line-height: calc(36 / 30);
+    margin-bottom: 5px;
+  }
+  &-number {
+    // font-size: 28px;
+    font-weight: 600;
+    line-height: calc(34 / 28);
+  }
+}
+
+#map {
+  height: 500px;
+  min-width: 700px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid;
+}
