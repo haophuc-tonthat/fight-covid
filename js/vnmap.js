@@ -1,5 +1,5 @@
 (async () => {
-  const topology = await fetch("./json/vndata.json").then((response) =>
+  const topology = await fetch("json/vndata.json").then((response) =>
     response.json()
   );
 
