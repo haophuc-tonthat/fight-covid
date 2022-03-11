@@ -1,7 +1,7 @@
 (async () => {
-  const topology = await fetch(
-    "https://github.com/haophuc-tonthat/fight-covid/blob/main/json/vndata.json"
-  ).then((response) => response.json());
+  const topology = await fetch("./json/vndata.json").then((response) =>
+    response.json()
+  );
 
   // Prepare demo data. The data is joined to map using value of 'hc-key'
   // property by default. See API docs for 'joinBy' for more info on linking
