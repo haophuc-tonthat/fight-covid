@@ -5,30 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fight Covid-19</title>
+
+    <!-- Font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Logo Icon -->
     <link
       rel="icon"
       href="./images/logo-icon.png"
       sizes="16x16"
       type="image/png"
     />
-    <link rel="stylesheet" href="./css/app.css" />
+    <!-- Libraries -->
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-    <script src="./js/vnmap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-mousewheel@3.1.13/jquery.mousewheel.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/app.css" />
+
+    
+
+    
+    
   </head>
   <body>
     <!-- sass ./sass/app.scss ./css/app.css --watch -->
+
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
 
     <!-- Your Plugin chat code -->
     <div id="fb-customer-chat" class="fb-customerchat"></div>
-
     <script>
       var chatbox = document.getElementById("fb-customer-chat");
       chatbox.setAttribute("page_id", "105577492088727");
@@ -56,6 +71,8 @@
     </script>
 
     <div class="wrapper">
+
+      <!-- Header -->
       <div class="header">
         <div class="container">
           <div class="header-container">
@@ -88,7 +105,12 @@
           </div>
         </div>
       </div>
+      <!-- End Header -->
+
+      <!-- Main -->
       <main>
+
+        <!-- Hero -->
         <section class="hero">
           <img
             srcset="./images/hero-background.png"
@@ -103,6 +125,8 @@
             </h1>
           </div>
         </section>
+
+        <!-- Statistical -->
         <section class="statistical">
           <div class="container">
             <div class="statistical-container">
@@ -111,28 +135,43 @@
                 <hr class="heading-line" />
               </div>
             </div>
+            <div class="statistical-choice">
+                <div class="choice-item" id="vietnam">Việt Nam</div>
+                <div class="choice-item" id="global">Thế Giới</div>
+            </div>
             <div class="statistical-content">
               <div class="covid-data">
                 <div class="covid-data-item">
                   <h4 class="covid-data-title">Số ca nhiễm</h4>
-                  <p class="text-red covid-data-number">5.260.495</p>
+                  <p class="text-red covid-data-number" id="cases"></p>
                 </div>
                 <div class="covid-data-item">
                   <h4 class="covid-data-title">Số ca khỏi</h4>
-                  <p class="text-blue covid-data-number">2.908.365</p>
+                  <p class="text-blue covid-data-number" id="deaths"></p>
                 </div>
                 <div class="covid-data-item">
                   <h4 class="covid-data-title">Số ca tử vong</h4>
-                  <p class="text-red covid-data-number">41.157</p>
+                  <p class="text-red covid-data-number" id="recoveries"></p>
                 </div>
               </div>
               <div class="statistical-map">
-                <div id="map"></div>
+                <div class="maps" id="map-vn"></div>
+                <div class="maps" id="map-global">
+                  <div class="map"></div>
+                </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
+        <section></section>
       </main>
     </div>
+    <script src="./asset/mapael/jquery.mapael.js"></script>
+    <script src="./asset/mapael/map/world_countries_mercator.min.js"></script>
+    <script src="./js/dataset-t.js"></script>
+    <script src="./js/map-vn.js"></script>
+    <script src="./js/map-global.js"></script>
+    <script src="./js/cases-vn.js"></script>
   </body>
 </html>

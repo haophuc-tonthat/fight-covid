@@ -1,11 +1,7 @@
 (async () => {
-  const topology = await fetch("json/vndata.json").then((response) =>
+  const topology = await fetch("json/covid-data-vn.json").then((response) =>
     response.json()
   );
-
-  // Prepare demo data. The data is joined to map using value of 'hc-key'
-  // property by default. See API docs for 'joinBy' for more info on linking
-  // data and map.
   const data = [
     ["vn-qn", 16153],
     ["vn-kh", 95694],
@@ -73,7 +69,7 @@
   ];
 
   // Create the chart
-  Highcharts.mapChart("map", {
+  Highcharts.mapChart("map-vn", {
     chart: {
       map: topology,
     },
