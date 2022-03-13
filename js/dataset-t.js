@@ -88,7 +88,7 @@ function procces(data_list) {
     {
       min: 100000,
       attrs: {
-        fill: "#0066CC",
+        fill: "#1D3B6C",
       },
       label: "100,000+ confirmed cases",
     },
@@ -96,7 +96,7 @@ function procces(data_list) {
       min: 10000,
       max: 99999,
       attrs: {
-        fill: "#0080FF",
+        fill: "#2B5988",
       },
       label: "10,000-9,9999 confirmed cases",
     },
@@ -104,7 +104,7 @@ function procces(data_list) {
       min: 1000,
       max: 9999,
       attrs: {
-        fill: "#3399FF",
+        fill: "#3B7DA9",
       },
       label: "1,000–9,999 confirmed cases",
     },
@@ -112,7 +112,7 @@ function procces(data_list) {
       min: 100,
       max: 999,
       attrs: {
-        fill: "#66B2FF",
+        fill: "#489AC5",
       },
       label: "100–999 confirmed cases",
     },
@@ -120,7 +120,7 @@ function procces(data_list) {
       min: 10,
       max: 99,
       attrs: {
-        fill: "#99CCFF",
+        fill: "#59BFE7",
       },
       label: "10–99 confirmed cases",
     },
@@ -133,7 +133,7 @@ function procces(data_list) {
       label: "1–9 confirmed cases",
     },
     {
-      max: 0,
+      min: 0,
       attrs: {
         fill: "#eeeeee",
       },

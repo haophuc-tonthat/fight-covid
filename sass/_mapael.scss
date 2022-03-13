@@ -2,8 +2,9 @@
   & .mapTooltip {
     font-family: $font;
     font-size: 12px;
+    font-weight: 500;
     position: absolute;
-    background-color: $text-color;
+    background-color: #e7eef4;
     opacity: 0.9;
     filter: alpha(opacity=70);
     border-radius: 10px;
@@ -11,7 +12,9 @@
     z-index: 1000;
     max-width: 200px;
     display: none;
-    color: $text-white-color;
+    color: $text-color;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+      rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   }
   /* For all zoom buttons */
   & .zoomButton {

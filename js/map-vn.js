@@ -84,9 +84,6 @@
 
     mapNavigation: {
       enabled: true,
-      //   buttonOptions: {
-      //     verticalAlign: "bottom",
-      //   },
     },
 
     colorAxis: {

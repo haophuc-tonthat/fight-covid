@@ -1,35 +1,24 @@
 @import "variables";
 .statistical {
-  padding-top: 86px;
   padding-bottom: 160px;
   &-container {
     display: flex;
     justify-content: center;
   }
   &-heading {
-    margin-bottom: 25px;
+    margin-bottom: 37px;
   }
   &-choice {
     display: flex;
     justify-content: center;
     gap: 0 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   &-content {
     gap: 0 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
-}
-
-.choice {
-  &-item {
-    font-weight: 700;
-    padding: 10px 30px;
-    background-color: $blue-color;
-    border-radius: 100rem;
-    cursor: pointer;
   }
 }
 
@@ -77,4 +66,8 @@
   &-global {
     display: none;
   }
+}
+
+#vietnam {
+  background-color: $text-color;
 }

@@ -11,6 +11,7 @@
 body {
   line-height: 1;
   font-family: $font;
+  font-size: 75%;
   color: $text-color;
 }
 .button {
@@ -18,18 +19,29 @@ body {
   padding: 18px 67px;
   font-family: $font;
   font-weight: 400;
-  border-radius: 100rem;
+  border-radius: 30px;
   line-height: 1;
   cursor: pointer;
+  &:hover {
+    background-color: $text-color;
+  }
   &-primary {
     color: $text-white-color;
     background-color: $blue-color;
+    font-size: 20px;
+  }
+  &-readmore {
+    transform: translateY(-90px);
   }
 }
 
 a {
   text-decoration: none;
   color: $text-color;
+}
+
+a:hover {
+  color: $red-color;
 }
 
 .text-red {
@@ -46,7 +58,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 900;
   &-line {
     height: 3px;
@@ -54,4 +66,20 @@ a {
     background-color: #5cc6ee;
     width: 181px;
   }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $text-color;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $text-color;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $text-color;
 }
