@@ -10,23 +10,24 @@
   }
   &-heading {
     position: absolute;
-    top: 477px;
+    top: 400px;
     left: 84px;
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 900;
   }
   &-content {
     position: relative;
-    padding-top: 140px;
-    padding-bottom: 120px;
+    padding: 140px 150px 120px 150px;
+
     &-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 0 64px;
+      gap: 0 81px;
     }
     &-text {
-      font-size: 24px;
+      max-width: 690px;
+      font-size: 18px;
       font-weight: 400;
       line-height: calc(29 / 24);
       letter-spacing: 0.01rem;
@@ -70,6 +71,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 0 60px;
     }
   }
   &-items {
@@ -89,7 +91,8 @@
       margin-bottom: 20px;
     }
     &-title {
-      font-size: 30px;
+      font-size: 20px;
+      line-height: calc(24 / 20);
       font-weight: 900;
     }
   }
@@ -98,8 +101,8 @@
 .image {
   &-world {
     position: absolute;
-    top: 340px;
-    left: 543px;
+    top: 290px;
+    left: 455px;
   }
   &-covid {
     &-1 {

@@ -1,0 +1,49 @@
+.footer {
+  background-color: $blue-color;
+  padding: 41px 0;
+  &-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0 300px;
+  }
+
+  &-menu {
+    list-style: none;
+    &-item {
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    &-item + .footer-menu-item {
+      margin-bottom: 16px;
+    }
+    &-link {
+      color: $text-white-color;
+    }
+  }
+
+  &-info {
+    margin-bottom: 73px;
+  }
+
+  &-heading {
+    margin-bottom: 18px;
+  }
+  &-text {
+    color: $text-white-color;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &-icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.social-media-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 24px;
+}

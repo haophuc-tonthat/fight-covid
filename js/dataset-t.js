@@ -15,11 +15,11 @@ function procces(data_list) {
         content:
           "<strong>" +
           obj["name"] +
-          "</strong><br />Confirmed cases : " +
+          "</strong><br />Ca nhiễm : " +
           obj["cases"] +
-          "<br />Deaths : " +
+          "<br />Tử vong : " +
           obj["deaths"] +
-          "<br />Recoveries : " +
+          "<br />Ca khỏi : " +
           obj["recoveries"],
       };
       return acc;
@@ -32,32 +32,6 @@ function procces(data_list) {
   }
   var deathCountryAreas = groupAreas(countryData, "deaths");
   var recoveryCountryAreas = groupAreas(countryData, "recoveries");
-
-  // Plots or cities
-  function groupPlots(objectArray, property) {
-    return objectArray.reduce(function (acc, obj) {
-      var key = obj["code"];
-      if (!acc[key]) {
-        acc[key] = {};
-      }
-      acc[key].latitude = obj["latitude"];
-      acc[key].longitude = obj["longitude"];
-      acc[key].value = obj[property];
-      acc[key].attrs = { href: "#" };
-      acc[key].tooltip = {
-        content:
-          "<strong>" +
-          obj["name"] +
-          "</strong><br />Confirmed cases : " +
-          obj["cases"] +
-          "<br />Deaths : " +
-          obj["deaths"] +
-          "<br />Recoveries : " +
-          obj["recoveries"],
-      };
-      return acc;
-    }, {});
-  }
 
   // VMap plugin
   function groupVMap(objectArray, property) {
