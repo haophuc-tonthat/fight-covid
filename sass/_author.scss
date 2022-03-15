@@ -1,22 +1,22 @@
 .author {
-  padding-top: 147px;
-  padding-bottom: 124px;
+  padding-top: 150px;
+  padding-bottom: 125px;
   &-heading {
     padding-bottom: 90px;
   }
   &-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 0 110px;
   }
   &-item {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 80px 32px 32px 32px;
-    max-width: 480px;
+    width: 400px;
     border: 1px solid #1d3b6c;
     border-radius: 30px;
     box-shadow: $blue-color 10px 5px;
@@ -24,11 +24,46 @@
   &-image {
     position: absolute;
     top: -70px;
+    left: 33%;
   }
   &-text {
     font-size: 16px;
     font-weight: 300;
     line-height: 22/16;
     margin-bottom: 20px;
+  }
+}
+
+.text {
+  &-right {
+    float: right;
+  }
+  &-left {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 1279.98px) {
+  .author {
+    &-list {
+      gap: 0 50px;
+    }
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .author {
+    &-list {
+      margin-top: 30px;
+      flex-direction: column;
+      gap: 150px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .author {
+    &-item {
+      width: 340px;
+    }
   }
 }

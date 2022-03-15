@@ -21,9 +21,15 @@
       color: $text-white-color;
     }
   }
+  &-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
   &-info {
-    margin-bottom: 73px;
+    margin-bottom: 50px;
   }
 
   &-heading {
@@ -46,4 +52,28 @@
   justify-content: flex-start;
   align-items: center;
   gap: 0 24px;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .footer {
+    &-container {
+      gap: 0 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .footer {
+    font-size: 16px;
+    &-container {
+      flex-direction: column;
+      gap: 20px 0;
+    }
+    &-menu {
+      padding-left: 20px;
+    }
+    &-contact {
+      padding-left: 20px;
+    }
+  }
 }

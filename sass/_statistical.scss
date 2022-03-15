@@ -53,7 +53,7 @@
 }
 .maps {
   position: relative;
-  height: 500px;
+  height: 525px;
   width: 800px;
   margin: 0 auto;
   border-radius: 10px;
@@ -71,4 +71,41 @@
 
 #vietnam {
   background-color: $text-color;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .statistical {
+    &-content {
+      flex-direction: column;
+    }
+  }
+  .covid-data {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 0 20px;
+  }
+  .maps {
+    height: 600px;
+    width: auto;
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .maps {
+    height: 477px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .statistical {
+    &-map {
+      display: none;
+    }
+  }
+  .covid-data {
+    flex-direction: column;
+    gap: 20px 0;
+  }
 }

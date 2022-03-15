@@ -67,7 +67,7 @@
       <div class="container">
         <div class="header-container">
           <a href=""><img srcset="./images/logo.png 2x" alt="" class="header-logo" /></a>
-          <ul class="menu">
+          <ul class="menu" id="menu">
             <li class="menu-item">
               <a href="#" class="menu-link active">Trang chủ</a>
             </li>
@@ -90,6 +90,9 @@
               <a href="#" class="menu-link">Blog</a>
             </li>
           </ul>
+          <div class="menu-toggle" id="menu-toggle">
+            <img src="./images/menu-icon.png" alt="" class="menu-icon">
+          </div>
         </div>
       </div>
     </div>
@@ -127,7 +130,7 @@
           <div class="blog-hero">
             <img srcset="./images/blog-background-1.png 2x" alt="" class="blog-background" />
             <div class="blog-heading">
-              <h1 class="text-white">BLOG-Những câu chuyện ấm lòng
+              <h1 class="text-white">Những câu chuyện ấm lòng
               </h1>
               <h1 class="text-blue">
                 mùa dịch
@@ -157,15 +160,19 @@
           </div>
           <div class="blog-more">
             <div class="blog-more-background">
-              <div class="blog-more-fill"></div>
+              <div class="blog-more-fill">
+                <div class="blog-more-content">
+                  <h3 class="text-white">Cho dù COVID có ảnh hưởng nặng nề đến cuộc sống cũng như việc học, việc lên lớp
+                    nhưng thầy cô vẫn luôn là những người cố gắng và nỗ lực để đem đến cho học sinh những buổi học cực
+                    kì
+                    chất lượng. Hãy cùng nhau cố gắng, cùng nhau vượt qua đại dịch
+                  </h3>
+                </div>
+              </div>
               <img srcset="./images/blog-background-2.png 2x" alt="" class="blog-more-image" />
+
             </div>
-            <div class="blog-more-content">
-              <h3 class="text-white">Cho dù COVID có ảnh hưởng nặng nề đến cuộc sống cũng như việc học, việc lên lớp
-                nhưng thầy cô vẫn luôn là những người cố gắng và nỗ lực để đem đến cho học sinh những buổi học cực kì
-                chất lượng. Hãy cùng nhau cố gắng, cùng nhau vượt qua đại dịch
-              </h3>
-            </div>
+
             <div class="blog-list">
               <div class="container">
                 <div class="blog-list-container">
@@ -245,19 +252,23 @@
               <hr class="heading-line" />
             </div>
             <div class="news-list">
-              <div class="news-item">
+              <div class="news-item news-odd">
                 <div class="news-image">
                   <img srcset="./images/news/news-1.png 2x" alt="">
                 </div>
                 <div class="news-content">
                   <a href="#">
-                    <h4 class="news-title">Trung bình số mắc COVID-19 mới ở nước ta 7 ngày qua hơn 134.000 ca/ngày</h4>
+                    <h4 class="news-title">Trung bình số mắc COVID-19 mới ở nước ta 7 ngày qua hơn 134.000
+                      ca/ngày</h4>
                   </a>
                   <p class="news-desc">Bộ Y tế cho biết trung bình số mắc COVID-19 mới ở nước ta 7 ngày qua hơn 134.000
                     ca/ngày; Biến chủng Omicron có xu hướng gia tăng lây nhiễm nhanh chóng...</p>
                 </div>
               </div>
-              <div class="news-item">
+              <div class="news-item news-even">
+                <div class="news-image">
+                  <img srcset="./images/news/news-2.png 2x" alt="">
+                </div>
                 <div class="news-content">
                   <a href="#">
                     <h4 class="news-title">Thế giới thêm 6.100 ca tử vong; Hàn Quốc lần đầu vượt 200.000 ca mắc mới</h4>
@@ -265,11 +276,9 @@
                   <p class="news-desc">Theo trang mạng worldometer.info, trong vòng 24 giờ qua, thế giới ghi nhận trên
                     1,4triệu ca mắc COVID-19 và trên 6.100 ca tử vong...</p>
                 </div>
-                <div class="news-image">
-                  <img srcset="./images/news/news-2.png 2x" alt="">
-                </div>
+
               </div>
-              <div class="news-item">
+              <div class="news-item news-odd">
                 <div class="news-image">
                   <img srcset="./images/news/news-3.png 2x" alt="">
                 </div>
@@ -297,7 +306,7 @@
               <hr class="heading-line" />
             </div>
             <div class="news-list">
-              <div class="news-item">
+              <div class="news-item news-odd">
                 <div class="news-image">
                   <img srcset="./images/vaccin/vaccin-1.png 2x" alt="">
                 </div>
@@ -310,7 +319,10 @@
                     nghệ sản xuất vaccine mRNA theo sáng kiến của WHO cho Việt Nam, Bangladesh,...</p>
                 </div>
               </div>
-              <div class="news-item">
+              <div class="news-item news-even">
+                <div class="news-image">
+                  <img srcset="./images/vaccin/vaccin-2.png 2x" alt="">
+                </div>
                 <div class="news-content">
                   <a href="#">
                     <h4 class="news-title">Bộ Y tế: Tiêm vaccine Pfizer cho trẻ từ 5-11 tuổi liều 0,2ml</h4>
@@ -318,9 +330,7 @@
                   <p class="news-desc">Ngày 1/3, Thứ trưởng Bộ Y tế Đỗ Xuân Tuyên vừa ký Quyết định số 457/QĐ-BYT sửa
                     đổi Điều 1 Quyết định số 2908/QĐ-BYT phê duyệt có điều kiện vaccine cho nhu cầu...</p>
                 </div>
-                <div class="news-image">
-                  <img srcset="./images/vaccin/vaccin-2.png 2x" alt="">
-                </div>
+
               </div>
             </div>
             <div class="button button-primary button-readmore">Xem thêm</div>
@@ -337,7 +347,7 @@
             </div>
             <div class="news-list">
               <div class="tutorials-item">
-                <div class="tutorials-image">
+                <div class="news-image">
                   <img srcset="./images/tutorials/tutorials-1.png 2x" alt="">
                 </div>
                 <div class="news-content">
@@ -350,7 +360,7 @@
                 </div>
               </div>
               <div class="tutorials-item">
-                <div class="tutorials-image">
+                <div class="news-image">
                   <img srcset="./images/tutorials/tutorials-2.png 2x" alt="">
                 </div>
                 <div class="news-content">
@@ -407,15 +417,18 @@
                   <img srcset="./images/author/author-1.png 2x" alt="">
                 </div>
                 <div class="author-info">
-                  <p class="author-text">Họ và tên &emsp;&emsp;&emsp;&nbsp;&nbsp; : &emsp;&emsp; Dương Thị
-                    Thùy
-                    Trâm</p>
-                  <p class="author-text">Lớp &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; : &emsp;&emsp; Arena
-                    Batch 70A</p>
-                  <p class="author-text">Số điện thoại &emsp;&nbsp;&nbsp;&nbsp; : &emsp;&emsp; 0905739500
+                  <p class="author-text"><Strong class="text-left">Họ và tên</Strong> : <span class="text-right">Dương
+                      Thị
+                      Thùy
+                      Trâm</span></p>
+                  <p class="author-text"><Strong class="text-left">Lớp</Strong> : <span class="text-right">Arena Batch
+                      70A</span></p>
+                  <p class="author-text"><Strong class="text-left">Số điện thoại</Strong> :
+                    <span class="text-right">0905739500</span>
                   </p>
-                  <p class="author-text">Email &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; :
-                    &emsp;&emsp; Tramthuydn@gmail.com</p>
+                  <p class="author-text"><Strong class="text-left">Email</Strong> :
+                    <span class="text-right">Tramthuydn@gmail.com</span>
+                  </p>
                 </div>
               </div>
               <div class="author-item">
@@ -423,16 +436,16 @@
                   <img srcset="./images/author/author-2.png 2x" alt="">
                 </div>
                 <div class="author-info">
-                  <p class="author-text">Họ và tên &emsp;&emsp;&emsp;&nbsp;&nbsp; : &emsp;&emsp; Tôn Thất
-                    Hạo
-                    Phúc</p>
-                  <p class="author-text">Lớp &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; : &emsp;&emsp;
-                    Aptech
-                    Batch 165</p>
-                  <p class="author-text">Số điện thoại &emsp;&nbsp;&nbsp;&nbsp; : &emsp;&emsp; 0822899123
+                  <p class="author-text"><Strong class="text-left">Họ và tên</Strong> : <span class="text-right">Tôn
+                      Thất Hạo Phúc</span></p>
+                  <p class="author-text"><Strong class="text-left">Lớp</Strong> : <span class="text-right">Aptech Batch
+                      165</span></p>
+                  <p class="author-text"><Strong class="text-left">Số điện thoại</Strong> :
+                    <span class="text-right">0822899123</span>
                   </p>
-                  <p class="author-text">Email &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; :
-                    &emsp;&emsp; haophuc.tonthat@gmail.com</p>
+                  <p class="author-text"><Strong class="text-left">Email</Strong> :
+                    <span class="text-right">haophuc.tonthat@gmail.com</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -470,10 +483,10 @@
             <div class="footer-info">
               <h4 class="footer-heading">ARENA MULTIMEDIA
               </h4>
-              <p class="footer-text">Địa chỉ&emsp;&emsp;&nbsp;&nbsp; : &emsp;&emsp;38 Yên Bái, Hải Châu 1, Hải
+              <p class="footer-text">Địa chỉ: 38 Yên Bái, Hải Châu 1, Hải
                 Châu, Đà
                 Nẵng 550000</p>
-              <p class="footer-text">Điện thoại&emsp; : &emsp;&emsp;0236 3779 779</p>
+              <p class="footer-text">Điện thoại: 0236 3779 779</p>
             </div>
             <div class="footer-social-media">
               <h4 class="footer-heading">Kết nối với chúng tôi
@@ -492,6 +505,7 @@
   </div>
 
   <!-- Js -->
+  <script src="./js/app.js"></script>
   <script src="./asset/mapael/jquery.mapael.js"></script>
   <script src="./asset/mapael/map/world_countries_mercator.min.js"></script>
   <script src="./js/dataset-t.js"></script>

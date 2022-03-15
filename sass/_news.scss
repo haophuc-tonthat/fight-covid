@@ -19,6 +19,9 @@
     gap: 0 62px;
     margin-bottom: 56px;
   }
+  &-even {
+    flex-direction: row-reverse;
+  }
   &-content {
     max-width: 660px;
   }
@@ -32,5 +35,39 @@
     font-size: 18px;
     font-weight: 300;
     line-height: calc(36 / 24);
+  }
+}
+
+@media screen and (max-width: 1023.98px) {
+  .news {
+    &-list {
+      margin-bottom: 30px;
+    }
+    &-item {
+      gap: 0 30px;
+    }
+    &-content {
+      max-width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .news {
+    &-container {
+      padding: 0 10px;
+    }
+    &-item {
+      flex-direction: column;
+    }
+    &-image {
+      margin-bottom: 10px;
+    }
+    &-title {
+      margin-bottom: 10px;
+    }
+    &-desc {
+      font-size: 16px;
+    }
   }
 }

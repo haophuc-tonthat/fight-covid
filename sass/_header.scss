@@ -9,25 +9,30 @@
     cursor: pointer;
   }
 }
-.menu {
-  font-family: $font;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0 32px;
+@media screen and (max-width: 1279.98px) {
+  .header {
+    &-container {
+      padding: 0 20px;
+    }
+  }
+}
 
-  &-link {
-    font-family: $font;
-    color: $text-color;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: calc(22 / 18);
+@media screen and (max-width: 1023.98px) {
+  .header {
+    padding-top: 20px;
+    padding-left: 15px;
+    &-logo {
+      height: 90px;
+    }
   }
-  &-link.active {
-    font-weight: 700;
-    opacity: unset;
-  }
-  &-link:hover {
-    color: $red-color;
+}
+@media screen and (max-width: 767.98px) {
+  .header {
+    &-container {
+      padding: 0;
+    }
+    &-logo {
+      height: 65px;
+    }
   }
 }
