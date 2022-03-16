@@ -1,517 +1,745 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fight Covid-19</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fight Covid-19</title>
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <!-- Logo Icon -->
+    <link
+      rel="icon"
+      href="./images/logo-icon.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <!-- Libraries -->
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-mousewheel@3.1.13/jquery.mousewheel.min.js"></script>
 
-  <!-- Logo Icon -->
-  <link rel="icon" href="./images/logo-icon.png" sizes="16x16" type="image/png" />
-  <!-- Libraries -->
-  <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-mousewheel@3.1.13/jquery.mousewheel.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/app.css" />
-</head>
+  <body>
+    <!-- sass ./sass/app.scss ./css/app.css --watch -->
 
-<body>
-  <!-- sass ./sass/app.scss ./css/app.css --watch -->
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
 
-  <!-- Messenger Plugin chat Code -->
-  <div id="fb-root"></div>
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "105577492088727");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-  <!-- Your Plugin chat code -->
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
-  <script>
-    var chatbox = document.getElementById("fb-customer-chat");
-    chatbox.setAttribute("page_id", "105577492088727");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  </script>
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v13.0",
+        });
+      };
 
-  <!-- Your SDK code -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: "v13.0",
-      });
-    };
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  </script>
-
-  <div class="wrapper">
-
-    <!-- Header -->
-    <div class="header">
-      <div class="container">
-        <div class="header-container">
-          <a href=""><img srcset="./images/logo.png 2x" alt="" class="header-logo" /></a>
-          <ul class="menu" id="menu">
-            <li class="menu-item">
-              <a href="#" class="menu-link active">Trang chủ</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Giới thiệu</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Tin tức</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Thống kê</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Tiêm chủng</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Hướng dẫn</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="menu-link">Blog</a>
-            </li>
-          </ul>
-          <div class="menu-toggle" id="menu-toggle">
-            <img src="./images/menu-icon.png" alt="" class="menu-icon">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Header -->
-
-    <!-- Main -->
-    <main>
-
-      <!-- Hero -->
-      <section class="hero">
+    <div class="wrapper">
+      <!-- Header -->
+      <div class="header">
         <div class="container">
-          <div class="hero-container">
-            <div class="hero-content">
-              <h1 class="hero-heading text-blue">Cùng nhau chiến đấu đại dịch <span class="text-default">COVID-19</span>
-              </h1>
-              <p class="hero-desc">Bảo vệ bản thân và những người xung quanh bằng cách biết sự việc và thực hiện các
-                biện pháp phòng ngừa thích hợp</p>
-              <a href="#help">
-                <div class="button button-primary button-submit">Hãy để chúng tôi giúp đỡ</div>
-              </a>
-            </div>
-            <div class="hero-image">
-              <img srcset="./images/hero-background.png 2x" alt="">
-            </div>
-
-
-          </div>
-        </div>
-
-      </section>
-
-      <!-- Blog -->
-      <section class="blog">
-        <div class="blog-container">
-          <div class="blog-hero">
-            <img srcset="./images/blog-background-1.png 2x" alt="" class="blog-background" />
-            <div class="blog-heading">
-              <h1 class="text-white">Những câu chuyện ấm lòng
-              </h1>
-              <h1 class="text-blue">
-                mùa dịch
-              </h1>
-            </div>
-          </div>
-          <div class="blog-content">
-            <div class="container">
-              <img srcset="./images/world.png 2x" alt="" class="image-world">
-              <img srcset="./images/covid-icon.png 2x" alt="" class="image-covid-1">
-              <img srcset="./images/covid-icon.png 2x" alt="" class="image-covid-2">
-              <div class="blog-content-item">
-                <p class="blog-content-text" id="blog-text-1">Dịch COVID-19 kéo dài đã gây ra những hệ lụy lớn cho nhiều
-                  ngành, nhiều hoạt động xã hội, nhưng thiệt hại nhiều nhất vẫn là về nền kinh tế và giáo dục. Trong
-                  thời điểm dịch hoành hành, khoảng mấy triệu trẻ em học sinh trên toàn quốc phải nghỉ học ở nhà.
-                  trong đó việc trường ARENA MULTIMEDIA của chúng ta phải nghỉ học là việc không thể tránh khỏi.</p>
-              </div>
-              <div class="blog-content-item"><img srcset="./images/blog-content.png 2x" alt=""
-                  class="blog-content-image">
-                <p class="blog-content-text" id="blog-text-2">Sinh viên bắt buộc phải ở nhà và phải học qua online, qua
-                  màn
-                  hình máy tính nhưng điều đó vẫn không làm khó tụi em vì đã có đội ngũ giáo viên giảng dạy rất là
-                  tâm huyết, tận tình chỉ bảo cũng như là có quay lại video để học sinh có thể xem lại, hoặc có chỗ
-                  nào không hiểu là trực tiếp nhắn tin hỏi bài và giải đáp ngay tại chỗ.</p>
-              </div>
-            </div>
-          </div>
-          <div class="blog-more">
-            <div class="blog-more-background">
-              <div class="blog-more-fill">
-                <div class="blog-more-content">
-                  <h3 class="text-white">Cho dù COVID có ảnh hưởng nặng nề đến cuộc sống cũng như việc học, việc lên lớp
-                    nhưng thầy cô vẫn luôn là những người cố gắng và nỗ lực để đem đến cho học sinh những buổi học cực
-                    kì
-                    chất lượng. Hãy cùng nhau cố gắng, cùng nhau vượt qua đại dịch
-                  </h3>
-                </div>
-              </div>
-              <img srcset="./images/blog-background-2.png 2x" alt="" class="blog-more-image" />
-
-            </div>
-
-            <div class="blog-list">
-              <div class="container">
-                <div class="blog-list-container">
-                  <div class="blog-items">
-                    <div class="blog-item">
-                      <img srcset="./images/blog-item-1.png 2x" alt="" class="blog-item-image">
-                      <a href="#">
-                        <h4 class="blog-item-title">Thầy giáo xin điện thoại cũ cho trò nghèo</h4>
-                      </a>
-                    </div>
-                    <div class="blog-item">
-                      <img srcset="./images/blog-item-2.png 2x" alt="" class="blog-item-image">
-                      <a href="#">
-                        <h4 class="blog-item-title">Thầy cô nấu hơn 1.000 suất ăn mỗi ngày gửi tặng bác sĩ</h4>
-                      </a>
-                    </div>
-                    <div class="blog-item">
-                      <img srcset="./images/blog-item-3.png 2x" alt="" class="blog-item-image">
-                      <a href="#">
-                        <h4 class="blog-item-title">Thầy giáo bán vườn ngô góp tiền mua máy thở cho Bắc Giang</h4>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="button button-primary button-readmore">Xem thêm</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Statistical -->
-      <section class="statistical">
-        <div class="container">
-          <div class="statistical-container">
-            <div class="heading statistical-heading">
-              <h2>THỐNG KÊ</h2>
-              <hr class="heading-line" />
-            </div>
-          </div>
-          <div class="statistical-choice">
-            <div id="vietnam" class="button button-primary">Việt Nam</div>
-            <div id="global" class="button button-primary">Thế Giới</div>
-          </div>
-          <div class="statistical-content">
-            <div class="covid-data">
-              <div class="covid-data-item">
-                <h4 class="covid-data-title">Số ca nhiễm</h4>
-                <p class="text-red covid-data-number" id="cases"></p>
-              </div>
-              <div class="covid-data-item">
-                <h4 class="covid-data-title">Số ca khỏi</h4>
-                <p class="text-blue covid-data-number" id="deaths"></p>
-              </div>
-              <div class="covid-data-item">
-                <h4 class="covid-data-title">Số ca tử vong</h4>
-                <p class="text-red covid-data-number" id="recoveries"></p>
-              </div>
-            </div>
-            <div class="statistical-map">
-              <div class="maps" id="map-vn"></div>
-              <div class="maps" id="map-global">
-                <div class="map"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- News -->
-      <section class="news">
-        <div class="container">
-          <div class="news-container">
-            <div class="heading news-heading">
-              <h2>TIN TỨC COVID</h2>
-              <hr class="heading-line" />
-            </div>
-            <div class="news-list">
-              <div class="news-item news-odd">
-                <div class="news-image">
-                  <img srcset="./images/news/news-1.png 2x" alt="">
-                </div>
-                <div class="news-content">
-                  <a href="#">
-                    <h4 class="news-title">Trung bình số mắc COVID-19 mới ở nước ta 7 ngày qua hơn 134.000
-                      ca/ngày</h4>
-                  </a>
-                  <p class="news-desc">Bộ Y tế cho biết trung bình số mắc COVID-19 mới ở nước ta 7 ngày qua hơn 134.000
-                    ca/ngày; Biến chủng Omicron có xu hướng gia tăng lây nhiễm nhanh chóng...</p>
-                </div>
-              </div>
-              <div class="news-item news-even">
-                <div class="news-image">
-                  <img srcset="./images/news/news-2.png 2x" alt="">
-                </div>
-                <div class="news-content">
-                  <a href="#">
-                    <h4 class="news-title">Thế giới thêm 6.100 ca tử vong; Hàn Quốc lần đầu vượt 200.000 ca mắc mới</h4>
-                  </a>
-                  <p class="news-desc">Theo trang mạng worldometer.info, trong vòng 24 giờ qua, thế giới ghi nhận trên
-                    1,4triệu ca mắc COVID-19 và trên 6.100 ca tử vong...</p>
-                </div>
-
-              </div>
-              <div class="news-item news-odd">
-                <div class="news-image">
-                  <img srcset="./images/news/news-3.png 2x" alt="">
-                </div>
-                <div class="news-content">
-                  <a href="#">
-                    <h4 class="news-title">Bộ trưởng Nguyễn Thanh Long: Tiêm chủng phải được coi là ưu tiên hàng đầu
-                    </h4>
-                  </a>
-                  <p class="news-desc">Bộ trưởng Bộ Y tế Nguyễn Thanh Long khẳng định: Vaccine phòng COVID-19 hiện nay
-                    vẫn đặc biệt hiệu quả trong giảm mức độ nặng, ca tử vong và nhập viện ...</p>
-                </div>
-              </div>
-            </div>
-            <div class="button button-primary button-readmore">Xem thêm</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Vaccin -->
-      <section class="news">
-        <div class="container">
-          <div class="news-container">
-            <div class="heading news-heading">
-              <h2>VACCIN TIÊM CHỦNG</h2>
-              <hr class="heading-line" />
-            </div>
-            <div class="news-list">
-              <div class="news-item news-odd">
-                <div class="news-image">
-                  <img srcset="./images/vaccin/vaccin-1.png 2x" alt="">
-                </div>
-                <div class="news-content">
-                  <a href="#">
-                    <h4 class="news-title">Việt Nam là 1 trong 11 quốc gia được chuyển giao công nghệ sản xuất vaccine
-                      mRNA</h4>
-                  </a>
-                  <p class="news-desc">Tối ngày 23/2, tại Geneva, Tổ chức Y tế thế giới (WHO) công bố chuyển giao công
-                    nghệ sản xuất vaccine mRNA theo sáng kiến của WHO cho Việt Nam, Bangladesh,...</p>
-                </div>
-              </div>
-              <div class="news-item news-even">
-                <div class="news-image">
-                  <img srcset="./images/vaccin/vaccin-2.png 2x" alt="">
-                </div>
-                <div class="news-content">
-                  <a href="#">
-                    <h4 class="news-title">Bộ Y tế: Tiêm vaccine Pfizer cho trẻ từ 5-11 tuổi liều 0,2ml</h4>
-                  </a>
-                  <p class="news-desc">Ngày 1/3, Thứ trưởng Bộ Y tế Đỗ Xuân Tuyên vừa ký Quyết định số 457/QĐ-BYT sửa
-                    đổi Điều 1 Quyết định số 2908/QĐ-BYT phê duyệt có điều kiện vaccine cho nhu cầu...</p>
-                </div>
-
-              </div>
-            </div>
-            <div class="button button-primary button-readmore">Xem thêm</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="news">
-        <div class="container">
-          <div class="news-container">
-            <div class="heading news-heading">
-              <h2>HƯỚNG DẪN</h2>
-              <hr class="heading-line" />
-            </div>
-            <div class="news-list">
-              <div class="tutorials-item">
-                <div class="news-image">
-                  <img srcset="./images/tutorials/tutorials-1.png 2x" alt="">
-                </div>
-                <div class="news-content">
-                  <a href="#">
-                    <h4 class="news-title">F0 có gội đầu được không?</h4>
-                  </a>
-                  <p class="news-desc">Trong bối cảnh các ca mắc COVID-19 gia tăng chóng mặt, người F0 ngập chìm
-                    trong
-                    các thông tin về cách chăm sóc và điều trị COVID -19...</p>
-                </div>
-              </div>
-              <div class="tutorials-item">
-                <div class="news-image">
-                  <img srcset="./images/tutorials/tutorials-2.png 2x" alt="">
-                </div>
-                <div class="news-content">
-                  <a href="#">
-                    <h4 class="news-title">F0 nên ăn gì để nhanh khỏi bệnh và ngăn ngừa hậu COVID-19?</h4>
-                  </a>
-                  <p class="news-desc">Khi bị mắc COVID-19, thường mọi người sẽ bị một vài triệu chứng như sốt, ho,
-                    có
-                    đờm, mệt mỏi. Điều này ảnh hưởng ít nhiều đến cơ thể,</p>
-                </div>
-              </div>
-            </div>
-            <div class="button button-primary button-readmore">Xem thêm</div>
-          </div>
-        </div>
-      </section>
-      <section class="help" id="help">
-        <div class="container">
-          <div class="help-container">
-            <div class="heading help-heading">
-              <h2>CẦN GIÚP ĐỠ</h2>
-              <hr class="heading-line" />
-            </div>
-            <div class="help-desc">
-              <p>Bảo vệ bản thân và những người xung quanh bằng cách biết sự việc và thực hiện các biện pháp phòng ngừa
-                thích hợp</p>
-            </div>
-            <div class="help-content">
-              <div class="help-logo">
-                <img srcset="./images/logo.png 1.5x" alt="">
-              </div>
-              <form action="" class="help-form">
-                <input class="help-input help-input-field" type="text" placeholder="Tên:">
-                <input class="help-input help-input-field" type="tel" placeholder="Số điện thoại:">
-                <input class="help-input help-input-field" type="tel" placeholder="Email:">
-                <textarea class="help-input help-input-area" style="resize: none;"
-                  placeholder="Chúng tôi có thể giúp được gì cho bạn :"></textarea>
-                <input class="button-submit help-input help-submit" type="submit" value="Gửi">
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="author">
-        <div class="container">
-          <div class="author-container">
-            <div class="heading author-heading">
-              <h2>GIỚI THIỆU TÁC GIẢ</h2>
-              <hr class="heading-line" />
-            </div>
-            <div class="author-list">
-              <div class="author-item">
-                <div class="author-image">
-                  <img srcset="./images/author/author-1.png 2x" alt="">
-                </div>
-                <div class="author-info">
-                  <p class="author-text"><Strong class="text-left">Họ và tên</Strong> : <span class="text-right">Dương
-                      Thị
-                      Thùy
-                      Trâm</span></p>
-                  <p class="author-text"><Strong class="text-left">Lớp</Strong> : <span class="text-right">Arena Batch
-                      70A</span></p>
-                  <p class="author-text"><Strong class="text-left">Số điện thoại</Strong> :
-                    <span class="text-right">0905739500</span>
-                  </p>
-                  <p class="author-text"><Strong class="text-left">Email</Strong> :
-                    <span class="text-right">Tramthuydn@gmail.com</span>
-                  </p>
-                </div>
-              </div>
-              <div class="author-item">
-                <div class="author-image">
-                  <img srcset="./images/author/author-2.png 2x" alt="">
-                </div>
-                <div class="author-info">
-                  <p class="author-text"><Strong class="text-left">Họ và tên</Strong> : <span class="text-right">Tôn
-                      Thất Hạo Phúc</span></p>
-                  <p class="author-text"><Strong class="text-left">Lớp</Strong> : <span class="text-right">Aptech Batch
-                      165</span></p>
-                  <p class="author-text"><Strong class="text-left">Số điện thoại</Strong> :
-                    <span class="text-right">0822899123</span>
-                  </p>
-                  <p class="author-text"><Strong class="text-left">Email</Strong> :
-                    <span class="text-right">haophuc.tonthat@gmail.com</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-container">
-          <div class="footer-list">
-            <ul class="footer-menu">
-              <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link">Giới thiệu</a>
+          <div class="header-container">
+            <a href=""
+              ><img
+                srcset="./images/logo.png 2x"
+                alt="Logo"
+                class="header-logo"
+            /></a>
+            <ul class="menu" id="menu">
+              <li class="menu-item">
+                <a href="#" class="menu-link active">Trang chủ</a>
               </li>
-              <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link">Thống kê</a>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Giới thiệu</a>
               </li>
-              <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link">Vaccine tiêm chủng </a>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Tin tức</a>
               </li>
-              <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link">Hướng dẫn</a>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Thống kê</a>
               </li>
-              <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link">Blog </a>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Tiêm chủng</a>
               </li>
-              <li class="footer-menu-item">
-                <a href="#" class="footer-menu-link">Tin tức Covid</a>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Hướng dẫn</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Blog</a>
               </li>
             </ul>
-
-          </div>
-          <div class="footer-contact">
-            <div class="footer-info">
-              <h4 class="footer-heading">ARENA MULTIMEDIA
-              </h4>
-              <p class="footer-text">Địa chỉ: 38 Yên Bái, Hải Châu 1, Hải
-                Châu, Đà
-                Nẵng 550000</p>
-              <p class="footer-text">Điện thoại: 0236 3779 779</p>
-            </div>
-            <div class="footer-social-media">
-              <h4 class="footer-heading">Kết nối với chúng tôi
-              </h4>
-              <div class="social-media-list">
-                <a href="#"><img class="footer-icon" srcset="./images/social-media/facebook.png 2x" alt=""></a>
-                <a href=" #"><img class="footer-icon" srcset="./images/social-media/pinterest.png 2x" alt=""></a>
-                <a href=" #"><img class="footer-icon" srcset="./images/social-media/instagram.png 2x" alt=""></a>
-                <a href=" #"><img class="footer-icon" srcset="./images/social-media/twitter.png 2x" alt=""></a>
-              </div>
+            <div class="menu-toggle" id="menu-toggle">
+              <img
+                src="./images/menu-icon.png"
+                alt="Menu icon"
+                class="menu-icon"
+              />
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
+      <!-- End Header -->
 
-  <!-- Js -->
-  <script src="./js/app.js"></script>
-  <script src="./asset/mapael/jquery.mapael.js"></script>
-  <script src="./asset/mapael/map/world_countries_mercator.min.js"></script>
-  <script src="./js/dataset-t.js"></script>
-  <script src="./js/covid-tracking.js"></script>
-  <script src="./js/map-vn.js"></script>
-  <script src="./js/map-global.js"></script>
-</body>
+      <!-- Main -->
+      <main>
+        <!-- Hero -->
+        <section class="hero">
+          <div class="container">
+            <div class="hero-container">
+              <div class="hero-content">
+                <h1 class="hero-heading text-blue">
+                  Cùng nhau chiến đấu đại dịch
+                  <span class="text-default">COVID-19</span>
+                </h1>
+                <p class="hero-desc">
+                  Bảo vệ bản thân và những người xung quanh bằng cách biết sự
+                  việc và thực hiện các biện pháp phòng ngừa thích hợp
+                </p>
+                <a href="#help">
+                  <div class="button button-primary button-submit">
+                    Hãy để chúng tôi giúp đỡ
+                  </div>
+                </a>
+              </div>
+              <div class="hero-image">
+                <img
+                  srcset="./images/hero-background.png 2x"
+                  alt="Hero Background"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <!-- Blog -->
+        <section class="blog">
+          <div class="blog-container">
+            <div class="blog-hero">
+              <img
+                srcset="./images/blog/blog-background-1.png 2x"
+                alt="Blog Background"
+                class="blog-background"
+              />
+              <img srcset="./images/plane.png 2x" alt="" class="image-plane" />
+              <div class="blog-heading">
+                <h1 class="text-white">Những câu chuyện ấm lòng</h1>
+                <h1 class="text-blue">mùa dịch</h1>
+              </div>
+            </div>
+            <div class="blog-content">
+              <div class="container">
+                <img
+                  srcset="./images/world.png 2x"
+                  alt="World Image"
+                  class="image-world"
+                />
+                <img
+                  srcset="./images/covid-icon.png 2x"
+                  alt="Covid Icon"
+                  class="image-covid-1"
+                />
+                <img
+                  srcset="./images/covid-icon.png 2x"
+                  alt="Covid Icon"
+                  class="image-covid-2"
+                />
+                <div class="blog-content-item">
+                  <p class="blog-content-text" id="blog-text-1">
+                    Dịch COVID-19 kéo dài đã gây ra những hệ lụy lớn cho nhiều
+                    ngành, nhiều hoạt động xã hội, nhưng thiệt hại nhiều nhất
+                    vẫn là về nền kinh tế và giáo dục. Trong thời điểm dịch
+                    hoành hành, khoảng mấy triệu trẻ em học sinh trên toàn quốc
+                    phải nghỉ học ở nhà. trong đó việc trường ARENA MULTIMEDIA
+                    của chúng ta phải nghỉ học là việc không thể tránh khỏi.
+                  </p>
+                </div>
+                <div class="blog-content-item">
+                  <img
+                    srcset="./images/blog/blog-content.png 2x"
+                    alt="Blog Image"
+                    class="blog-content-image"
+                  />
+                  <p class="blog-content-text" id="blog-text-2">
+                    Sinh viên bắt buộc phải ở nhà và phải học qua online, qua
+                    màn hình máy tính nhưng điều đó vẫn không làm khó tụi em vì
+                    đã có đội ngũ giáo viên giảng dạy rất là tâm huyết, tận tình
+                    chỉ bảo cũng như là có quay lại video để học sinh có thể xem
+                    lại, hoặc có chỗ nào không hiểu là trực tiếp nhắn tin hỏi
+                    bài và giải đáp ngay tại chỗ.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="blog-more">
+              <div class="blog-more-background">
+                <div class="blog-more-fill">
+                  <div class="blog-more-content">
+                    <h3 class="text-white">
+                      Cho dù COVID có ảnh hưởng nặng nề đến cuộc sống cũng như
+                      việc học, việc lên lớp nhưng thầy cô vẫn luôn là những
+                      người cố gắng và nỗ lực để đem đến cho học sinh những buổi
+                      học cực kì chất lượng. Hãy cùng nhau cố gắng, cùng nhau
+                      vượt qua đại dịch
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  srcset="./images/blog/blog-background-2.png 2x"
+                  alt="Blog Background"
+                  class="blog-more-image"
+                />
+              </div>
+
+              <div class="blog-list">
+                <div class="container">
+                  <div class="blog-list-container">
+                    <div class="blog-items">
+                      <div class="blog-item">
+                        <a href="#"
+                          ><img
+                            srcset="./images/blog/blog-item-1.png 2x"
+                            alt="Blog"
+                            class="blog-item-image"
+                        /></a>
+                        <a href="#">
+                          <h4 class="blog-item-title">
+                            Thầy giáo xin điện thoại cũ cho trò nghèo
+                          </h4>
+                        </a>
+                      </div>
+                      <div class="blog-item">
+                        <a href="#"
+                          ><img
+                            srcset="./images/blog/blog-item-2.png 2x"
+                            alt="Blog"
+                            class="blog-item-image"
+                        /></a>
+                        <a href="#">
+                          <h4 class="blog-item-title">
+                            Thầy cô nấu hơn 1.000 suất ăn mỗi ngày gửi tặng bác
+                            sĩ
+                          </h4>
+                        </a>
+                      </div>
+                      <div class="blog-item">
+                        <a href="#"
+                          ><img
+                            srcset="./images/blog/blog-item-3.png 2x"
+                            alt="Blog"
+                            class="blog-item-image"
+                        /></a>
+                        <a href="#">
+                          <h4 class="blog-item-title">
+                            Thầy giáo bán vườn ngô góp tiền mua máy thở cho Bắc
+                            Giang
+                          </h4>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="button button-primary button-readmore">
+                      Xem thêm
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Statistical -->
+        <section class="statistical">
+          <div class="container">
+            <div class="statistical-container">
+              <div class="heading statistical-heading">
+                <h2>THỐNG KÊ</h2>
+                <hr class="heading-line" />
+              </div>
+            </div>
+            <div class="statistical-choice">
+              <div id="vietnam" class="button button-primary">Việt Nam</div>
+              <div id="global" class="button button-primary">Thế Giới</div>
+            </div>
+            <div class="statistical-content">
+              <div class="covid-data">
+                <div class="covid-data-item">
+                  <h4 class="covid-data-title">Số ca nhiễm</h4>
+                  <p class="text-red covid-data-number" id="cases"></p>
+                </div>
+                <div class="covid-data-item">
+                  <h4 class="covid-data-title">Số ca khỏi</h4>
+                  <p class="text-blue covid-data-number" id="deaths"></p>
+                </div>
+                <div class="covid-data-item">
+                  <h4 class="covid-data-title">Số ca tử vong</h4>
+                  <p class="text-red covid-data-number" id="recoveries"></p>
+                </div>
+              </div>
+              <div class="statistical-map">
+                <div class="maps" id="map-vn"></div>
+                <div class="maps" id="map-global">
+                  <div class="map"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- News -->
+        <section class="news">
+          <div class="container">
+            <div class="news-container">
+              <div class="heading news-heading">
+                <h2>TIN TỨC COVID</h2>
+                <hr class="heading-line" />
+              </div>
+              <div class="news-list">
+                <div class="news-item news-odd">
+                  <div class="news-image">
+                    <a href="#"
+                      ><img srcset="./images/news/news-1.png 2x" alt="News"
+                    /></a>
+                  </div>
+                  <div class="news-content">
+                    <a href="#">
+                      <h4 class="news-title">
+                        Trung bình số mắc COVID-19 mới ở nước ta 7 ngày qua hơn
+                        134.000 ca/ngày
+                      </h4>
+                    </a>
+                    <p class="news-desc">
+                      Bộ Y tế cho biết trung bình số mắc COVID-19 mới ở nước ta
+                      7 ngày qua hơn 134.000 ca/ngày; Biến chủng Omicron có xu
+                      hướng gia tăng lây nhiễm nhanh chóng...
+                    </p>
+                  </div>
+                </div>
+                <div class="news-item news-even">
+                  <div class="news-image">
+                    <a href="#"
+                      ><img srcset="./images/news/news-2.png 2x" alt="News"
+                    /></a>
+                  </div>
+                  <div class="news-content">
+                    <a href="#">
+                      <h4 class="news-title">
+                        Thế giới thêm 6.100 ca tử vong; Hàn Quốc lần đầu vượt
+                        200.000 ca mắc mới
+                      </h4>
+                    </a>
+                    <p class="news-desc">
+                      Theo trang mạng worldometer.info, trong vòng 24 giờ qua,
+                      thế giới ghi nhận trên 1,4triệu ca mắc COVID-19 và trên
+                      6.100 ca tử vong...
+                    </p>
+                  </div>
+                </div>
+                <div class="news-item news-odd">
+                  <div class="news-image">
+                    <a href="#"
+                      ><img srcset="./images/news/news-3.png 2x" alt="News"
+                    /></a>
+                  </div>
+                  <div class="news-content">
+                    <a href="#">
+                      <h4 class="news-title">
+                        Bộ trưởng Nguyễn Thanh Long: Tiêm chủng phải được coi là
+                        ưu tiên hàng đầu
+                      </h4>
+                    </a>
+                    <p class="news-desc">
+                      Bộ trưởng Bộ Y tế Nguyễn Thanh Long khẳng định: Vaccine
+                      phòng COVID-19 hiện nay vẫn đặc biệt hiệu quả trong giảm
+                      mức độ nặng, ca tử vong và nhập viện ...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="button button-primary button-readmore">Xem thêm</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vaccin -->
+        <section class="news">
+          <div class="container">
+            <div class="news-container">
+              <div class="heading news-heading">
+                <h2>VACCIN TIÊM CHỦNG</h2>
+                <hr class="heading-line" />
+              </div>
+              <div class="news-list">
+                <div class="news-item news-odd">
+                  <div class="news-image">
+                    <a href="#"
+                      ><img
+                        srcset="./images/vaccin/vaccin-1.png 2x"
+                        alt="Vaccin News"
+                    /></a>
+                  </div>
+                  <div class="news-content">
+                    <a href="#">
+                      <h4 class="news-title">
+                        Việt Nam là 1 trong 11 quốc gia được chuyển giao công
+                        nghệ sản xuất vaccine mRNA
+                      </h4>
+                    </a>
+                    <p class="news-desc">
+                      Tối ngày 23/2, tại Geneva, Tổ chức Y tế thế giới (WHO)
+                      công bố chuyển giao công nghệ sản xuất vaccine mRNA theo
+                      sáng kiến của WHO cho Việt Nam, Bangladesh,...
+                    </p>
+                  </div>
+                </div>
+                <div class="news-item news-even">
+                  <div class="news-image">
+                    <a href="#"
+                      ><img
+                        srcset="./images/vaccin/vaccin-2.png 2x"
+                        alt="Vaccin News"
+                    /></a>
+                  </div>
+                  <div class="news-content">
+                    <a href="#">
+                      <h4 class="news-title">
+                        Bộ Y tế: Tiêm vaccine Pfizer cho trẻ từ 5-11 tuổi liều
+                        0,2ml
+                      </h4>
+                    </a>
+                    <p class="news-desc">
+                      Ngày 1/3, Thứ trưởng Bộ Y tế Đỗ Xuân Tuyên vừa ký Quyết
+                      định số 457/QĐ-BYT sửa đổi Điều 1 Quyết định số
+                      2908/QĐ-BYT phê duyệt có điều kiện vaccine cho nhu cầu...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="button button-primary button-readmore">Xem thêm</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="news">
+          <div class="container">
+            <div class="news-container">
+              <div class="heading news-heading">
+                <h2>HƯỚNG DẪN</h2>
+                <hr class="heading-line" />
+              </div>
+              <div class="news-list">
+                <div class="tutorials-item">
+                  <div class="news-image">
+                    <a href="#"
+                      ><img
+                        srcset="./images/tutorials/tutorials-1.png 2x"
+                        alt="Tutorial"
+                    /></a>
+                  </div>
+                  <div class="news-content">
+                    <a href="#">
+                      <h4 class="news-title">F0 có gội đầu được không?</h4>
+                    </a>
+                    <p class="news-desc">
+                      Trong bối cảnh các ca mắc COVID-19 gia tăng chóng mặt,
+                      người F0 ngập chìm trong các thông tin về cách chăm sóc và
+                      điều trị COVID -19...
+                    </p>
+                  </div>
+                </div>
+                <div class="tutorials-item">
+                  <div class="news-image">
+                    <a href="#"
+                      ><img
+                        srcset="./images/tutorials/tutorials-2.png 2x"
+                        alt="Tutorial"
+                    /></a>
+                  </div>
+                  <div class="news-content">
+                    <a href="#">
+                      <h4 class="news-title">
+                        F0 nên ăn gì để nhanh khỏi bệnh và ngăn ngừa hậu
+                        COVID-19?
+                      </h4>
+                    </a>
+                    <p class="news-desc">
+                      Khi bị mắc COVID-19, thường mọi người sẽ bị một vài triệu
+                      chứng như sốt, ho, có đờm, mệt mỏi. Điều này ảnh hưởng ít
+                      nhiều đến cơ thể,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="button button-primary button-readmore">Xem thêm</div>
+            </div>
+          </div>
+        </section>
+        <section class="help" id="help">
+          <div class="container">
+            <div class="help-container">
+              <img
+                src="./images/covid-icon.png"
+                alt="Covid Icon"
+                id="help-covid-icon-1"
+              />
+              <img
+                src="./images/covid-icon.png"
+                alt="Covid Icon"
+                id="help-covid-icon-2"
+              />
+              <img
+                src="./images/covid-icon.png"
+                alt="Covid Icon"
+                id="help-covid-icon-3"
+              />
+              <div class="heading help-heading">
+                <h2>CẦN GIÚP ĐỠ</h2>
+                <hr class="heading-line" />
+              </div>
+              <div class="help-desc">
+                <p>
+                  Bảo vệ bản thân và những người xung quanh bằng cách biết sự
+                  việc và thực hiện các biện pháp phòng ngừa thích hợp
+                </p>
+              </div>
+              <div class="help-content">
+                <div class="help-logo">
+                  <img srcset="./images/logo.png 1.5x" alt="Logo" />
+                </div>
+                <form action="" class="help-form" role="form">
+                  <input
+                    id="name"
+                    class="help-input help-input-field"
+                    type="text"
+                    placeholder="Tên:"
+                  />
+                  <small id="name-validator"></small>
+                  <input
+                    id="phone"
+                    class="help-input help-input-field"
+                    type="tel"
+                    placeholder="Số điện thoại:"
+                  />
+                  <small id="phone-validator"></small>
+
+                  <input
+                    id="email"
+                    class="help-input help-input-field"
+                    type="tel"
+                    placeholder="Email:"
+                  />
+                  <small id="email-validator"></small>
+
+                  <textarea
+                    class="help-input help-input-area"
+                    style="resize: none"
+                    placeholder="Chúng tôi có thể giúp được gì cho bạn :"
+                  ></textarea>
+                  <input
+                    class="button-submit help-input help-submit"
+                    type="submit"
+                    value="Gửi"
+                  />
+                </form>
+                <div class="dialog">
+                  <div class="dialog-image">
+                    <img src="./images/tick.png" alt="Tick Icon" />
+                  </div>
+                  <div class="dialog-heading"><h2>Hoàn tất</h2></div>
+                  <div class="dialog-desc">
+                    <p>
+                      Thông tin của bạn đã được ghi nhận, chúng tôi sẽ liên lạc
+                      đến bạn sớm nhất.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="author">
+          <div class="container">
+            <div class="author-container">
+              <div class="heading author-heading">
+                <h2>GIỚI THIỆU TÁC GIẢ</h2>
+                <hr class="heading-line" />
+              </div>
+              <div class="author-list">
+                <div class="author-item">
+                  <div class="author-image">
+                    <img
+                      srcset="./images/author/author-1.png 2x"
+                      alt="Author"
+                    />
+                  </div>
+                  <div class="author-info">
+                    <p class="author-text">
+                      <strong class="text-left">Họ và tên</strong> :
+                      <span class="text-right">Dương Thị Thùy Trâm</span>
+                    </p>
+                    <p class="author-text">
+                      <strong class="text-left">Lớp</strong> :
+                      <span class="text-right">Arena Batch 70A</span>
+                    </p>
+                    <p class="author-text">
+                      <strong class="text-left">Số điện thoại</strong> :
+                      <a href="tel:0905739500"
+                        ><span class="text-right">0905739500</span></a
+                      >
+                    </p>
+                    <p class="author-text">
+                      <strong class="text-left">Email</strong> :
+                      <a href="mailto:Tramthuydn@gmail.com"
+                        ><span class="text-right">Tramthuydn@gmail.com</span></a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="author-item">
+                  <div class="author-image">
+                    <img
+                      srcset="./images/author/author-2.png 2x"
+                      alt="Author"
+                    />
+                  </div>
+                  <div class="author-info">
+                    <p class="author-text">
+                      <strong class="text-left">Họ và tên</strong> :
+                      <span class="text-right">Tôn Thất Hạo Phúc</span>
+                    </p>
+                    <p class="author-text">
+                      <strong class="text-left">Lớp</strong> :
+                      <span class="text-right">Aptech Batch 165</span>
+                    </p>
+                    <p class="author-text">
+                      <strong class="text-left">Số điện thoại</strong> :
+                      <a href="tel:0822899123"
+                        ><span class="text-right">0822899123</span></a
+                      >
+                    </p>
+                    <p class="author-text">
+                      <strong class="text-left">Email</strong> :
+                      <a href="mailto:haophuc.tonthat@gmail.com"
+                        ><span class="text-right"
+                          >haophuc.tonthat@gmail.com</span
+                        ></a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-container">
+            <div class="footer-list">
+              <ul class="footer-menu">
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Giới thiệu</a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Thống kê</a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Vaccine tiêm chủng </a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Hướng dẫn</a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Blog </a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Tin tức Covid</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-contact">
+              <div class="footer-info">
+                <h4 class="footer-heading">ARENA MULTIMEDIA</h4>
+                <p class="footer-text">
+                  Địa chỉ: 38 Yên Bái, Hải Châu 1, Hải Châu, Đà Nẵng 550000
+                </p>
+                <a href="tel:0236 3779 779"
+                  ><p class="footer-text">Điện thoại: 0236 3779 779</p></a
+                >
+              </div>
+              <div class="footer-social-media">
+                <h4 class="footer-heading">Kết nối với chúng tôi</h4>
+                <div class="social-media-list">
+                  <a href="#"
+                    ><img
+                      class="footer-icon"
+                      srcset="./images/social-media/facebook.png 2x"
+                      alt=""
+                  /></a>
+                  <a href=" #"
+                    ><img
+                      class="footer-icon"
+                      srcset="./images/social-media/pinterest.png 2x"
+                      alt=""
+                  /></a>
+                  <a href=" #"
+                    ><img
+                      class="footer-icon"
+                      srcset="./images/social-media/instagram.png 2x"
+                      alt=""
+                  /></a>
+                  <a href=" #"
+                    ><img
+                      class="footer-icon"
+                      srcset="./images/social-media/twitter.png 2x"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Js -->
+    <script src="./js/app.js"></script>
+    <script src="./asset/mapael/jquery.mapael.js"></script>
+    <script src="./asset/mapael/map/world_countries_mercator.min.js"></script>
+    <script src="./js/global-covid-data.js"></script>
+    <script src="./js/covid-tracking.js"></script>
+    <script src="./js/map-vn.js"></script>
+    <script src="./js/map-global.js"></script>
+    <script src="./js/validator.js"></script>
+  </body>
 </html>

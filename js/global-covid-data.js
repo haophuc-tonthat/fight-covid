@@ -30,8 +30,6 @@ function procces(data_list) {
     var at = groupAreas(countryData, "cases");
     return at;
   }
-  var deathCountryAreas = groupAreas(countryData, "deaths");
-  var recoveryCountryAreas = groupAreas(countryData, "recoveries");
 
   // VMap plugin
   function groupVMap(objectArray, property) {

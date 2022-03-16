@@ -67,3 +67,11 @@
     }
   }
 }
+@media screen and (max-width: 374.98px) {
+  .author {
+    &-item {
+      width: 310px;
+      padding: 80 21px 21px;
+    }
+  }
+}

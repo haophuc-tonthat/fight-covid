@@ -110,6 +110,11 @@
     top: 290px;
     left: 455px;
   }
+  &-plane {
+    position: absolute;
+    top: 78px;
+    right: 480px;
+  }
   &-covid {
     &-1 {
       position: absolute;
@@ -157,6 +162,11 @@
   }
 
   .image {
+    &-plane {
+      height: 30%;
+      top: 30px;
+      right: 120px;
+    }
     &-covid-1 {
       display: none;
     }
@@ -242,6 +252,10 @@
   .image {
     &-world {
       display: none;
+    }
+    &-plane {
+      height: 20%;
+      right: 20px;
     }
   }
 

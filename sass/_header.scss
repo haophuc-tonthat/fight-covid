@@ -1,5 +1,12 @@
 .header {
-  padding-top: 40px;
+  padding: 40px 0;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  transition: all 0.5s;
+
   &-container {
     display: flex;
     justify-content: space-between;
@@ -7,6 +14,15 @@
   }
   &-logo {
     cursor: pointer;
+  }
+  &.shrink {
+    padding: 5px 0;
+    background-color: $blue-color;
+    transition: all 0.5s;
+  }
+
+  &.shrink &-logo {
+    height: 70px;
   }
 }
 @media screen and (max-width: 1279.98px) {
@@ -20,6 +36,7 @@
 @media screen and (max-width: 1023.98px) {
   .header {
     padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 15px;
     &-logo {
       height: 90px;
@@ -32,6 +49,10 @@
       padding: 0;
     }
     &-logo {
+      height: 65px;
+    }
+
+    &.shrink &-logo {
       height: 65px;
     }
   }
