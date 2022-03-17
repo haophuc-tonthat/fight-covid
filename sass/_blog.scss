@@ -135,6 +135,33 @@
   margin-bottom: 120px;
 }
 
+@media screen and (min-width: 1920px) {
+  .blog {
+    &-content {
+      &-text {
+        font-size: 20px;
+      }
+    }
+    &-heading {
+      left: 200px;
+    }
+  }
+  #blog-text {
+    &-1 {
+      max-width: 1280px;
+    }
+    &-2 {
+      max-width: 1280px;
+    }
+  }
+}
+
+@media screen and (max-width: 1919px) {
+}
+
+@media screen and (min-width: 1280px) {
+}
+
 @media screen and (max-width: 1279.98px) {
   .blog {
     &-hero {

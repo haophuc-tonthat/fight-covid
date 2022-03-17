@@ -73,6 +73,27 @@
   background-color: $text-color;
 }
 
+@media screen and (min-width: 1920px) {
+  .statistical {
+    &-content {
+      gap: 0 50px;
+    }
+  }
+  .covid-data {
+    gap: 50px 0;
+    &-title {
+      font-size: 22px;
+    }
+    &-number {
+      font-size: 20px;
+    }
+  }
+  .maps {
+    height: 646px;
+    width: 1000px;
+  }
+}
+
 @media screen and (max-width: 1279.98px) {
   .statistical {
     &-content {

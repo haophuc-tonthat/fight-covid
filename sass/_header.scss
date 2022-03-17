@@ -1,9 +1,10 @@
 .header {
   padding: 40px 0;
   background-color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 99999;
   transition: all 0.5s;
 

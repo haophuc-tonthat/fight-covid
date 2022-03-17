@@ -97,6 +97,38 @@ a:hover {
   color: $text-color;
 }
 
+@media screen and (min-width: 2560px) {
+  .container {
+    max-width: 1920px;
+  }
+  .button {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 2559.98px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    max-width: none;
+  }
+}
+
 @media screen and (max-width: 1279.98px) {
   .button {
     &-readmore {

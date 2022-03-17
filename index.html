@@ -27,9 +27,11 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-mousewheel@3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/app.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -44,6 +46,11 @@
       var chatbox = document.getElementById("fb-customer-chat");
       chatbox.setAttribute("page_id", "105577492088727");
       chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- AOS -->
+    <script>
+      AOS.init();
     </script>
 
     <!-- Your SDK code -->
@@ -119,21 +126,37 @@
           <div class="container">
             <div class="hero-container">
               <div class="hero-content">
-                <h1 class="hero-heading text-blue">
+                <h1
+                  class="hero-heading text-blue"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   Cùng nhau chiến đấu đại dịch
                   <span class="text-default">COVID-19</span>
                 </h1>
-                <p class="hero-desc">
+                <p
+                  class="hero-desc"
+                  data-aos="fade-up"
+                  data-aos-duration="2500"
+                >
                   Bảo vệ bản thân và những người xung quanh bằng cách biết sự
                   việc và thực hiện các biện pháp phòng ngừa thích hợp
                 </p>
                 <a href="#help">
-                  <div class="button button-primary button-submit">
+                  <div
+                    class="button button-primary button-submit"
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
                     Hãy để chúng tôi giúp đỡ
                   </div>
                 </a>
               </div>
-              <div class="hero-image">
+              <div
+                class="hero-image"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              >
                 <img
                   srcset="./images/hero-background.png 2x"
                   alt="Hero Background"
@@ -153,7 +176,11 @@
                 class="blog-background"
               />
               <img srcset="./images/plane.png 2x" alt="" class="image-plane" />
-              <div class="blog-heading">
+              <div
+                class="blog-heading"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
                 <h1 class="text-white">Những câu chuyện ấm lòng</h1>
                 <h1 class="text-blue">mùa dịch</h1>
               </div>
@@ -176,7 +203,12 @@
                   class="image-covid-2"
                 />
                 <div class="blog-content-item">
-                  <p class="blog-content-text" id="blog-text-1">
+                  <p
+                    class="blog-content-text"
+                    id="blog-text-1"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     Dịch COVID-19 kéo dài đã gây ra những hệ lụy lớn cho nhiều
                     ngành, nhiều hoạt động xã hội, nhưng thiệt hại nhiều nhất
                     vẫn là về nền kinh tế và giáo dục. Trong thời điểm dịch
@@ -191,7 +223,12 @@
                     alt="Blog Image"
                     class="blog-content-image"
                   />
-                  <p class="blog-content-text" id="blog-text-2">
+                  <p
+                    class="blog-content-text"
+                    id="blog-text-2"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                  >
                     Sinh viên bắt buộc phải ở nhà và phải học qua online, qua
                     màn hình máy tính nhưng điều đó vẫn không làm khó tụi em vì
                     đã có đội ngũ giáo viên giảng dạy rất là tâm huyết, tận tình
@@ -206,7 +243,11 @@
               <div class="blog-more-background">
                 <div class="blog-more-fill">
                   <div class="blog-more-content">
-                    <h3 class="text-white">
+                    <h3
+                      class="text-white"
+                      data-aos="fade-up"
+                      data-aos-duration="2000"
+                    >
                       Cho dù COVID có ảnh hưởng nặng nề đến cuộc sống cũng như
                       việc học, việc lên lớp nhưng thầy cô vẫn luôn là những
                       người cố gắng và nỗ lực để đem đến cho học sinh những buổi
@@ -226,7 +267,11 @@
                 <div class="container">
                   <div class="blog-list-container">
                     <div class="blog-items">
-                      <div class="blog-item">
+                      <div
+                        class="blog-item"
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
+                      >
                         <a href="#"
                           ><img
                             srcset="./images/blog/blog-item-1.png 2x"
@@ -239,7 +284,11 @@
                           </h4>
                         </a>
                       </div>
-                      <div class="blog-item">
+                      <div
+                        class="blog-item"
+                        data-aos="fade-up"
+                        data-aos-duration="2500"
+                      >
                         <a href="#"
                           ><img
                             srcset="./images/blog/blog-item-2.png 2x"
@@ -253,7 +302,11 @@
                           </h4>
                         </a>
                       </div>
-                      <div class="blog-item">
+                      <div
+                        class="blog-item"
+                        data-aos="fade-up"
+                        data-aos-duration="3000"
+                      >
                         <a href="#"
                           ><img
                             srcset="./images/blog/blog-item-3.png 2x"
@@ -325,7 +378,11 @@
                 <hr class="heading-line" />
               </div>
               <div class="news-list">
-                <div class="news-item news-odd">
+                <div
+                  class="news-item news-odd"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   <div class="news-image">
                     <a href="#"
                       ><img srcset="./images/news/news-1.png 2x" alt="News"
@@ -345,7 +402,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="news-item news-even">
+                <div
+                  class="news-item news-even"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   <div class="news-image">
                     <a href="#"
                       ><img srcset="./images/news/news-2.png 2x" alt="News"
@@ -365,7 +426,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="news-item news-odd">
+                <div
+                  class="news-item news-odd"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   <div class="news-image">
                     <a href="#"
                       ><img srcset="./images/news/news-3.png 2x" alt="News"
@@ -400,7 +465,11 @@
                 <hr class="heading-line" />
               </div>
               <div class="news-list">
-                <div class="news-item news-odd">
+                <div
+                  class="news-item news-odd"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   <div class="news-image">
                     <a href="#"
                       ><img
@@ -422,7 +491,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="news-item news-even">
+                <div
+                  class="news-item news-even"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   <div class="news-image">
                     <a href="#"
                       ><img
@@ -459,7 +532,11 @@
                 <hr class="heading-line" />
               </div>
               <div class="news-list">
-                <div class="tutorials-item">
+                <div
+                  class="tutorials-item"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   <div class="news-image">
                     <a href="#"
                       ><img
@@ -478,7 +555,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="tutorials-item">
+                <div
+                  class="tutorials-item"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
                   <div class="news-image">
                     <a href="#"
                       ><img
@@ -596,7 +677,7 @@
                 <hr class="heading-line" />
               </div>
               <div class="author-list">
-                <div class="author-item">
+                <div class="author-item" data-aos="zoom-in">
                   <div class="author-image">
                     <img
                       srcset="./images/author/author-1.png 2x"
@@ -626,7 +707,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="author-item">
+                <div class="author-item" data-aos="zoom-in">
                   <div class="author-image">
                     <img
                       srcset="./images/author/author-2.png 2x"

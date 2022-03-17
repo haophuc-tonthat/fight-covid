@@ -99,6 +99,35 @@ a:hover {
   color: #1d3b6c;
 }
 
+@media screen and (min-width: 2560px) {
+  .container {
+    max-width: 1920px;
+  }
+
+  .button {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 2559.98px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+@media screen and (max-width: 1599px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    max-width: none;
+  }
+}
 @media screen and (max-width: 1279.98px) {
   .button-readmore {
     transform: translateY(-50px);
@@ -161,9 +190,10 @@ h6 {
 .header {
   padding: 40px 0;
   background-color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 99999;
   transition: all 0.5s;
 }
@@ -280,11 +310,12 @@ h6 {
   }
 }
 .hero {
-  padding-top: 20px;
+  padding-top: 200px;
   padding-bottom: 130px;
 }
 .hero-container {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   gap: 0 57px;
 }
@@ -302,6 +333,31 @@ h6 {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 2560px) {
+  .hero-container {
+    justify-content: space-around;
+    gap: 0 100px;
+  }
+  .hero-content {
+    max-width: 900px;
+  }
+  .hero-heading {
+    font-size: 55px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero-desc {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .hero-heading {
+    font-size: 46px;
+  }
+  .hero-content {
+    max-width: 700px;
+  }
+}
 @media screen and (max-width: 1279.98px) {
   .hero-container {
     gap: 0 33px;
@@ -342,7 +398,7 @@ h6 {
   }
   .hero-image {
     height: 500px;
-    width: auto;
+    width: 100%;
   }
   .hero-image img {
     width: 100%;
@@ -352,7 +408,7 @@ h6 {
 }
 @media screen and (max-width: 767.98px) {
   .hero {
-    padding-bottom: 80px;
+    padding: 120px 0 80px 0;
   }
   .hero-container {
     flex-direction: column-reverse;
@@ -490,6 +546,21 @@ h6 {
   margin-bottom: 120px;
 }
 
+@media screen and (min-width: 1920px) {
+  .blog-content-text {
+    font-size: 20px;
+  }
+  .blog-heading {
+    left: 200px;
+  }
+
+  #blog-text-1 {
+    max-width: 1280px;
+  }
+  #blog-text-2 {
+    max-width: 1280px;
+  }
+}
 @media screen and (max-width: 1279.98px) {
   .blog-hero {
     height: 500px;
@@ -669,6 +740,26 @@ h6 {
   background-color: #1d3b6c;
 }
 
+@media screen and (min-width: 1920px) {
+  .statistical-content {
+    gap: 0 50px;
+  }
+
+  .covid-data {
+    gap: 50px 0;
+  }
+  .covid-data-title {
+    font-size: 22px;
+  }
+  .covid-data-number {
+    font-size: 20px;
+  }
+
+  .maps {
+    height: 646px;
+    width: 1000px;
+  }
+}
 @media screen and (max-width: 1279.98px) {
   .statistical-content {
     flex-direction: column;
@@ -805,6 +896,20 @@ h6 {
   line-height: 1.5;
 }
 
+@media screen and (min-width: 1920px) {
+  .news-content {
+    max-width: 800px;
+  }
+  .news-item {
+    gap: 0 80px;
+  }
+  .news-title {
+    font-size: 22px;
+  }
+  .news-desc {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 1023.98px) {
   .news-list {
     margin-bottom: 30px;
@@ -856,6 +961,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   padding: 30px 125px;
+  margin: 0 60px;
   border: 2px solid #1d3b6c;
   border-radius: 40px;
   box-shadow: 0px 29px 0px -14px #5cc6ee, 0px 52px 0px -24px #7777771f, 0px 0px 50px -1px #5cc6ee;
@@ -934,6 +1040,15 @@ input {
   top: 520px;
 }
 
+@media screen and (max-width: 1279.98px) {
+  .help-container {
+    margin: 0 10px;
+  }
+
+  #help-covid-icon-3 {
+    display: none;
+  }
+}
 @media screen and (max-width: 1023.98px) {
   #help-covid-icon-1 {
     position: absolute;
