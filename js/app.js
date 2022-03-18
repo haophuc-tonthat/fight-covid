@@ -11,13 +11,13 @@ $("#menu-toggle").click(function (event) {
   event.stopPropagation();
 });
 
+// Change header style when scroll
 let scroll =
   window.requestAnimationFrame ||
   function (callback) {
     window.setTimeout(callback, 1000 / 60);
   };
 
-// Change header style when scroll
 let header = document.querySelector(".header");
 window.addEventListener("scroll", () => {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {

@@ -1,3 +1,4 @@
+// Load Global Map Covid-19
 function loadGlobalMap() {
   $.get("https://corona.lmao.ninja/v2/countries").then(function (
     countriesResp

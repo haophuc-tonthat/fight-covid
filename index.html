@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fight Covid-19</title>
 
-    <!-- Font Inter -->
+    <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +21,7 @@
       sizes="16x16"
       type="image/png"
     />
+
     <!-- Libraries -->
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,11 +49,6 @@
       chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
-    <!-- AOS -->
-    <script>
-      AOS.init();
-    </script>
-
     <!-- Your SDK code -->
     <script>
       window.fbAsyncInit = function () {
@@ -73,6 +69,10 @@
       })(document, "script", "facebook-jssdk");
     </script>
 
+    <!-- AOS -->
+    <script>
+      AOS.init();
+    </script>
     <div class="wrapper">
       <!-- Header -->
       <div class="header">
@@ -158,20 +158,22 @@
                 data-aos-duration="2000"
               >
                 <img
-                  srcset="./images/hero-background.png 2x"
+                  srcset="./images/hero-background.webp 2x"
                   alt="Hero Background"
                 />
               </div>
             </div>
           </div>
         </section>
+        <!-- End Hero -->
 
         <!-- Blog -->
         <section class="blog">
           <div class="blog-container">
+            <!-- Blog Hero -->
             <div class="blog-hero">
               <img
-                srcset="./images/blog/blog-background-1.png 2x"
+                srcset="./images/blog/blog-background-1.webp 2x"
                 alt="Blog Background"
                 class="blog-background"
               />
@@ -185,6 +187,8 @@
                 <h1 class="text-blue">mùa dịch</h1>
               </div>
             </div>
+
+            <!-- Blog Content -->
             <div class="blog-content">
               <div class="container">
                 <img
@@ -219,7 +223,7 @@
                 </div>
                 <div class="blog-content-item">
                   <img
-                    srcset="./images/blog/blog-content.png 2x"
+                    srcset="./images/blog/blog-content.webp 2x"
                     alt="Blog Image"
                     class="blog-content-image"
                   />
@@ -239,6 +243,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Blog List -->
             <div class="blog-more">
               <div class="blog-more-background">
                 <div class="blog-more-fill">
@@ -257,7 +263,7 @@
                   </div>
                 </div>
                 <img
-                  srcset="./images/blog/blog-background-2.png 2x"
+                  srcset="./images/blog/blog-background-2.webp 2x"
                   alt="Blog Background"
                   class="blog-more-image"
                 />
@@ -267,6 +273,7 @@
                 <div class="container">
                   <div class="blog-list-container">
                     <div class="blog-items">
+                      <!-- Blog Item 1 -->
                       <div
                         class="blog-item"
                         data-aos="fade-up"
@@ -274,7 +281,7 @@
                       >
                         <a href="#"
                           ><img
-                            srcset="./images/blog/blog-item-1.png 2x"
+                            srcset="./images/blog/blog-item-1.webp 2x"
                             alt="Blog"
                             class="blog-item-image"
                         /></a>
@@ -284,6 +291,8 @@
                           </h4>
                         </a>
                       </div>
+
+                      <!-- Blog Item 2 -->
                       <div
                         class="blog-item"
                         data-aos="fade-up"
@@ -291,7 +300,7 @@
                       >
                         <a href="#"
                           ><img
-                            srcset="./images/blog/blog-item-2.png 2x"
+                            srcset="./images/blog/blog-item-2.webp 2x"
                             alt="Blog"
                             class="blog-item-image"
                         /></a>
@@ -302,6 +311,8 @@
                           </h4>
                         </a>
                       </div>
+
+                      <!-- Blog Item 3 -->
                       <div
                         class="blog-item"
                         data-aos="fade-up"
@@ -309,7 +320,7 @@
                       >
                         <a href="#"
                           ><img
-                            srcset="./images/blog/blog-item-3.png 2x"
+                            srcset="./images/blog/blog-item-3.webp 2x"
                             alt="Blog"
                             class="blog-item-image"
                         /></a>
@@ -340,11 +351,16 @@
                 <hr class="heading-line" />
               </div>
             </div>
+
+            <!-- Choice Button -->
             <div class="statistical-choice">
               <div id="vietnam" class="button button-primary">Việt Nam</div>
               <div id="global" class="button button-primary">Thế Giới</div>
             </div>
+
+            <!-- Statistical Content  -->
             <div class="statistical-content">
+              <!-- Covid Data -->
               <div class="covid-data">
                 <div class="covid-data-item">
                   <h4 class="covid-data-title">Số ca nhiễm</h4>
@@ -359,6 +375,7 @@
                   <p class="text-red covid-data-number" id="recoveries"></p>
                 </div>
               </div>
+              <!-- Covid Map Data -->
               <div class="statistical-map">
                 <div class="maps" id="map-vn"></div>
                 <div class="maps" id="map-global">
@@ -377,7 +394,10 @@
                 <h2>TIN TỨC COVID</h2>
                 <hr class="heading-line" />
               </div>
+
+              <!-- News List -->
               <div class="news-list">
+                <!-- News Item 1 -->
                 <div
                   class="news-item news-odd"
                   data-aos="fade-up"
@@ -385,7 +405,7 @@
                 >
                   <div class="news-image">
                     <a href="#"
-                      ><img srcset="./images/news/news-1.png 2x" alt="News"
+                      ><img srcset="./images/news/news-1.webp 2x" alt="News"
                     /></a>
                   </div>
                   <div class="news-content">
@@ -402,6 +422,8 @@
                     </p>
                   </div>
                 </div>
+
+                <!-- News Item 2 -->
                 <div
                   class="news-item news-even"
                   data-aos="fade-up"
@@ -409,7 +431,7 @@
                 >
                   <div class="news-image">
                     <a href="#"
-                      ><img srcset="./images/news/news-2.png 2x" alt="News"
+                      ><img srcset="./images/news/news-2.webp 2x" alt="News"
                     /></a>
                   </div>
                   <div class="news-content">
@@ -426,6 +448,8 @@
                     </p>
                   </div>
                 </div>
+
+                <!-- News Item 3 -->
                 <div
                   class="news-item news-odd"
                   data-aos="fade-up"
@@ -433,7 +457,7 @@
                 >
                   <div class="news-image">
                     <a href="#"
-                      ><img srcset="./images/news/news-3.png 2x" alt="News"
+                      ><img srcset="./images/news/news-3.webp 2x" alt="News"
                     /></a>
                   </div>
                   <div class="news-content">
@@ -464,7 +488,10 @@
                 <h2>VACCIN TIÊM CHỦNG</h2>
                 <hr class="heading-line" />
               </div>
+
+              <!-- Vaccin News Content -->
               <div class="news-list">
+                <!-- Vaccin News 1 -->
                 <div
                   class="news-item news-odd"
                   data-aos="fade-up"
@@ -473,7 +500,7 @@
                   <div class="news-image">
                     <a href="#"
                       ><img
-                        srcset="./images/vaccin/vaccin-1.png 2x"
+                        srcset="./images/vaccin/vaccin-1.webp 2x"
                         alt="Vaccin News"
                     /></a>
                   </div>
@@ -491,6 +518,7 @@
                     </p>
                   </div>
                 </div>
+                <!-- Vaccin News 2 -->
                 <div
                   class="news-item news-even"
                   data-aos="fade-up"
@@ -499,7 +527,7 @@
                   <div class="news-image">
                     <a href="#"
                       ><img
-                        srcset="./images/vaccin/vaccin-2.png 2x"
+                        srcset="./images/vaccin/vaccin-2.webp 2x"
                         alt="Vaccin News"
                     /></a>
                   </div>
@@ -531,16 +559,18 @@
                 <h2>HƯỚNG DẪN</h2>
                 <hr class="heading-line" />
               </div>
+              <!-- Tutorial Content -->
               <div class="news-list">
+                <!-- Tutorial Item 1 -->
                 <div
-                  class="tutorials-item"
+                  class="tutorial-item"
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
                   <div class="news-image">
                     <a href="#"
                       ><img
-                        srcset="./images/tutorials/tutorials-1.png 2x"
+                        srcset="./images/tutorial/tutorial-1.webp 2x"
                         alt="Tutorial"
                     /></a>
                   </div>
@@ -555,15 +585,16 @@
                     </p>
                   </div>
                 </div>
+                <!-- Tutorial Item 2 -->
                 <div
-                  class="tutorials-item"
+                  class="tutorial-item"
                   data-aos="fade-up"
                   data-aos-duration="2000"
                 >
                   <div class="news-image">
                     <a href="#"
                       ><img
-                        srcset="./images/tutorials/tutorials-2.png 2x"
+                        srcset="./images/tutorial/tutorial-2.webp 2x"
                         alt="Tutorial"
                     /></a>
                   </div>
@@ -586,6 +617,8 @@
             </div>
           </div>
         </section>
+
+        <!-- Help -->
         <section class="help" id="help">
           <div class="container">
             <div class="help-container">
@@ -618,6 +651,8 @@
                 <div class="help-logo">
                   <img srcset="./images/logo.png 1.5x" alt="Logo" />
                 </div>
+
+                <!-- Help Form -->
                 <form action="" class="help-form" role="form">
                   <input
                     id="name"
@@ -653,6 +688,8 @@
                     value="Gửi"
                   />
                 </form>
+
+                <!-- Success Dialog -->
                 <div class="dialog">
                   <div class="dialog-image">
                     <img src="./images/tick.png" alt="Tick Icon" />
@@ -669,6 +706,8 @@
             </div>
           </div>
         </section>
+
+        <!-- Author -->
         <section class="author">
           <div class="container">
             <div class="author-container">
@@ -676,7 +715,10 @@
                 <h2>GIỚI THIỆU TÁC GIẢ</h2>
                 <hr class="heading-line" />
               </div>
+
+              <!-- Author List -->
               <div class="author-list">
+                <!-- Author Item 1 -->
                 <div class="author-item" data-aos="zoom-in">
                   <div class="author-image">
                     <img
@@ -707,6 +749,8 @@
                     </p>
                   </div>
                 </div>
+
+                <!-- Author Item 2 -->
                 <div class="author-item" data-aos="zoom-in">
                   <div class="author-image">
                     <img
@@ -744,6 +788,9 @@
           </div>
         </section>
       </main>
+      <!-- End Main -->
+
+      <!-- Footer -->
       <footer class="footer">
         <div class="container">
           <div class="footer-container">
@@ -812,6 +859,7 @@
           </div>
         </div>
       </footer>
+      <!-- End Footer -->
     </div>
 
     <!-- Js -->

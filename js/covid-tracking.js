@@ -1,5 +1,6 @@
 vnTracking();
 
+//Load Tracking Vietnam Funtion
 function vnTracking() {
   $.get("https://corona.lmao.ninja/v2/countries").then(function (covidData) {
     const data = covidData;
@@ -19,6 +20,7 @@ function vnTracking() {
   });
 }
 
+// Load Tracking Global Funtion
 function globalTracking() {
   $.get("https://disease.sh/v3/covid-19/all").then(function (covidData) {
     const data = covidData;
@@ -36,6 +38,7 @@ function globalTracking() {
   });
 }
 
+//Format number
 function addCommas(nStr) {
   nStr += "";
   x = nStr.split(".");
@@ -48,6 +51,7 @@ function addCommas(nStr) {
   return x1 + x2;
 }
 
+//Change data onclick Viet Nam button
 $("#vietnam").click(function () {
   vnTracking();
   $("#vietnam").css({ backgroundColor: "#1d3b6c" });
@@ -56,6 +60,7 @@ $("#vietnam").click(function () {
   $("#map-global").css({ display: "none" });
 });
 
+//Change data onclick Global button
 $("#global").click(function () {
   globalTracking();
   loadGlobalMap();

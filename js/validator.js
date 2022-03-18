@@ -1,4 +1,6 @@
+// Validator help form
 var main = function formValidator() {
+  // Name Validator Funtion
   function nameValidator() {
     var name = $("#name").val();
     var flag = false;
@@ -16,8 +18,10 @@ var main = function formValidator() {
     return flag;
   }
 
+  // Phone Validator Funtion
   function phoneValidator() {
     var phone = $("#phone").val();
+    // Regex Phone Number
     var phoneRegex = new RegExp("(84|0[3|5|7|8|9])+([0-9]{8})\\b");
     var flag = false;
 
@@ -37,8 +41,10 @@ var main = function formValidator() {
     return flag;
   }
 
+  // Email Validator Funtion
   function emailValidator() {
     var email = $("#email").val();
+    // Regex Email
     var emailRegex = new RegExp(
       "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$"
     );
@@ -61,11 +67,12 @@ var main = function formValidator() {
     return flag;
   }
 
+  //Show Success Dialog
   function showDialog() {
     $(".dialog").addClass("active");
   }
 
-  // Close menu when click outside
+  // Close Dialog when click outside
   $("html").click(function () {
     $(".dialog").removeClass("active");
   });
